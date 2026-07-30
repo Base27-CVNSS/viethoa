@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Kiểm tra giấy phép, quyền sử dụng và liêm chính trước khi fork, sao chép hoặc Việt hóa repository GitHub.">
+  <meta name="theme-color" content="#0d1117">
+  <title>Việt Hóa Có Trách Nhiệm · GitHub License Check</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="shell">
+  <header class="topbar">
+    <a class="brand" href="#kiem-tra"><span>⚖</span> Việt Hóa Có Trách Nhiệm</a>
+    <nav aria-label="Điều hướng">
+      <a href="#quy-trinh">7 bước</a><a href="#tuyen-ngon">Tuyên ngôn</a>
+      <a href="#vung-xam">Vùng xám</a><a href="#co-hoi-so">Cơ hội số</a>
+    </nav>
+  </header>
+
+  <section id="kiem-tra" class="panel hero">
+    <p class="kicker">Việc phải làm trước khi Fork · Copy · Việt hóa · Phân phối</p>
+    <h1>Dán link GitHub, kiểm tra <em>quyền và trách nhiệm</em></h1>
+    <p class="lead">Không chỉ hỏi “có lấy được code không?”. Hãy biết bạn được phép làm gì, phải giữ lại điều gì, đâu là vùng xám và cách đóng góp tử tế trước khi dùng công sức của người khác làm nền cho dự án của mình.</p>
+
+    <form id="licenseForm" class="search" novalidate>
+      <label class="sr-only" for="repoUrl">Link repository GitHub</label>
+      <input id="repoUrl" autocomplete="url" placeholder="https://github.com/owner/repository hoặc owner/repository">
+      <button id="checkBtn" type="submit">Kiểm tra ngay</button>
+    </form>
+    <div class="samples"><span>Thử:</span>
+      <button data-repo="facebook/react">facebook/react</button>
+      <button data-repo="torvalds/linux">torvalds/linux</button>
+      <button data-repo="mozilla/pdf.js">mozilla/pdf.js</button>
+    </div>
+    <p id="inlineError" class="inline-error" role="alert"></p>
+
+    <div class="criteria">
+      <article><b>🌐 Việt hóa</b><span>Có được sửa code, thêm locale?</span></article>
+      <article><b>📦 Phân phối</b><span>Có phải cung cấp source?</span></article>
+      <article><b>© Ghi công</b><span>Phải giữ thông báo nào?</span></article>
+      <article><b>💼 Thương mại</b><span>Có thể bán hoặc tích hợp?</span></article>
+    </div>
+    <p class="fineprint">Tóm tắt kỹ thuật và đạo đức nghề nghiệp, không thay thế tư vấn pháp lý. Luôn đọc toàn văn LICENSE, NOTICE, COPYING, AUTHORS và giấy phép dependency.</p>
+  </section>
+
+  <section id="quy-trinh" class="panel">
+    <p class="kicker">Quy trình chuẩn trước khi dùng mã nguồn</p>
+    <h2>Bảy bước của một lập trình viên có trách nhiệm</h2>
+    <p class="lead">Nút Fork rất dễ bấm, nhưng quyền sử dụng không thể suy ra chỉ vì repository đang công khai.</p>
+    <ol class="steps">
+      <li><div><b>Xác định đúng repository gốc</b><span>Kiểm tra chủ sở hữu, website, release, lịch sử commit và các fork giả mạo.</span></div></li>
+      <li><div><b>Đọc LICENSE và tài liệu liên quan</b><span>Kiểm tra LICENSE, NOTICE, COPYING, AUTHORS, TRADEMARK và license trong từng thư mục.</span></div></li>
+      <li><div><b>Phân loại hành động dự kiến</b><span>Dùng riêng, học tập, sửa đổi, phân phối, thương mại, SaaS hay nhúng thư viện là các tình huống khác nhau.</span></div></li>
+      <li><div><b>Lập hồ sơ ghi công</b><span>Ghi upstream, tác giả/chủ sở hữu, phiên bản hoặc commit nền, giấy phép và ngày bắt đầu fork.</span></div></li>
+      <li><div><b>Tách phần đóng góp của bạn</b><span>Dùng CHANGELOG và commit rõ ràng để phân biệt phần gốc, bản dịch và mã mới.</span></div></li>
+      <li><div><b>Ưu tiên đóng góp upstream</b><span>Nếu dự án có i18n, hãy gửi locale tiếng Việt bằng Pull Request để cộng đồng cùng hưởng lợi.</span></div></li>
+      <li><div><b>Rà soát trước phát hành</b><span>Kiểm tra source offer, copyleft, NOTICE, nhãn hiệu, bằng sáng chế, model, dữ liệu và dependency.</span></div></li>
+    </ol>
+  </section>
+
+  <section id="tuyen-ngon" class="panel manifesto">
+    <p class="kicker">Tuyên bố đạo đức · liêm chính · học thuật</p>
+    <h2>Việt hóa là mở một cánh cửa, không phải xóa tên người đã xây ngôi nhà</h2>
+    <div class="prose">
+      <p>Tri thức công nghệ đang tăng nhanh hơn khả năng tiếp cận của nhiều người Việt. Ngôn ngữ có thể trở thành một bức tường, nhất là với người tự học không có điều kiện tham gia đào tạo đắt tiền.</p>
+      <p>Nhưng mục đích tốt không tự động làm cho mọi phương pháp đều đúng. Việt hóa không cho phép xóa lịch sử, thay tên tác giả, che giấu nguồn gốc hoặc nhận công sức tập thể thành sản phẩm riêng. <strong>Liêm chính bắt đầu từ việc nói đúng mình đã làm gì.</strong></p>
+      <p>Chúng tôi phân biệt rõ tác giả dự án gốc, người dịch/Việt hóa, người bảo trì fork và người phát triển tính năng mới. Mỗi vai trò đều đáng ghi nhận, nhưng không vai trò nào được quyền thay thế vai trò khác.</p>
+    </div>
+    <blockquote>“Lấy mã nguồn mở không phải là lấy không. Đó là nhận một niềm tin, kèm nghĩa vụ giữ giấy phép, ghi công trung thực, bảo vệ người dùng và trao lại giá trị cho cộng đồng.”</blockquote>
+    <div class="cards3">
+      <article><h3>Liêm chính pháp lý</h3><p>Tuân thủ LICENSE, NOTICE, copyleft, bằng sáng chế và điều kiện phân phối.</p></article>
+      <article><h3>Liêm chính học thuật</h3><p>Trích dẫn nguồn; không trình bày bản dịch như nghiên cứu hoặc phát minh nguyên bản.</p></article>
+      <article><h3>Liêm chính kỹ thuật</h3><p>Không cài mã độc, telemetry bí mật, API key lộ lọt hoặc gây hiểu sai về upstream.</p></article>
+    </div>
+  </section>
+
+  <section id="vung-xam" class="panel">
+    <p class="kicker">Những ranh giới thường bị bỏ qua</p>
+    <h2>Vùng xám không phải vùng “muốn làm gì cũng được”</h2>
+    <p class="lead">License code thường không bao phủ toàn bộ thương hiệu, dữ liệu, model AI, tài liệu, hình ảnh, font, API và dependency.</p>
+    <div class="gray-grid">
+      <article><b>Không có LICENSE</b><p>Repository công khai không mặc nhiên cấp quyền sửa, phân phối hoặc thương mại hóa.</p></article>
+      <article><b>Đổi tên và logo</b><p>Rebrand không xóa nghĩa vụ bản quyền; nhãn hiệu là một lớp quyền riêng.</p></article>
+      <article><b>“Chỉ dịch README”</b><p>Bản dịch vẫn là nội dung phái sinh. Hãy ghi nguồn và người dịch.</p></article>
+      <article><b>SaaS</b><p>GPL, AGPL, EUPL và điều khoản API có thể tạo nghĩa vụ khác nhau khi dùng qua mạng.</p></article>
+      <article><b>Model và dataset</b><p>License code không tự động cấp quyền dùng weight, dữ liệu, hình ảnh hoặc giọng nói.</p></article>
+      <article><b>Code do AI sinh</b><p>Người commit vẫn chịu trách nhiệm về nguồn gốc, bảo mật và tính đúng đắn.</p></article>
+      <article><b>Giáo dục/phi lợi nhuận</b><p>Mục tiêu xã hội không mặc nhiên miễn nghĩa vụ license và quyền riêng tư.</p></article>
+      <article><b>Fork bị bỏ quên</b><p>Không đồng bộ upstream có thể bỏ lỡ bản vá bảo mật và gây hại cho người dùng.</p></article>
+    </div>
+  </section>
+
+  <section class="panel">
+    <p class="kicker">Bảng tra cứu nhanh</p>
+    <h2>Việt hóa · Phân phối · Ghi công · Thương mại</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Giấy phép</th><th>Việt hóa</th><th>Phân phối</th><th>Ghi công</th><th>Thương mại</th><th>Điểm cần nhớ</th></tr></thead>
+      <tbody>
+        <tr><td>MIT</td><td class="yes">Được</td><td class="yes">Được</td><td class="maybe">Bắt buộc</td><td class="yes">Được</td><td>Giữ copyright và MIT License.</td></tr>
+        <tr><td>Apache-2.0</td><td class="yes">Được</td><td class="yes">Được</td><td class="maybe">Bắt buộc</td><td class="yes">Được</td><td>Đánh dấu thay đổi; giữ NOTICE; có điều khoản patent.</td></tr>
+        <tr><td>BSD 2/3-Clause</td><td class="yes">Được</td><td class="yes">Được</td><td class="maybe">Bắt buộc</td><td class="yes">Được</td><td>BSD-3 cấm dùng tên tác giả để chứng thực nếu chưa được phép.</td></tr>
+        <tr><td>GPL-2.0/3.0</td><td class="yes">Được</td><td class="maybe">Có điều kiện</td><td class="maybe">Bắt buộc</td><td class="maybe">Có điều kiện</td><td>Copyleft mạnh; phân phối phải cung cấp source tương ứng.</td></tr>
+        <tr><td>LGPL-2.1/3.0</td><td class="yes">Được</td><td class="maybe">Có điều kiện</td><td class="maybe">Bắt buộc</td><td class="maybe">Có điều kiện</td><td>Copyleft tập trung vào thư viện và khả năng thay thế/relink.</td></tr>
+        <tr><td>MPL-2.0</td><td class="yes">Được</td><td class="maybe">Có điều kiện</td><td class="maybe">Bắt buộc</td><td class="maybe">Có điều kiện</td><td>Copyleft cấp file.</td></tr>
+        <tr><td>AGPL-3.0</td><td class="yes">Được</td><td class="maybe">Có điều kiện</td><td class="maybe">Bắt buộc</td><td class="maybe">Có điều kiện</td><td>Bản sửa đổi dùng qua mạng có nghĩa vụ source.</td></tr>
+        <tr><td>EUPL-1.2</td><td class="yes">Được</td><td class="maybe">Có điều kiện</td><td class="maybe">Bắt buộc</td><td class="maybe">Có điều kiện</td><td>Copyleft châu Âu; có danh sách tương thích.</td></tr>
+        <tr><td>Unlicense/CC0</td><td class="yes">Được</td><td class="yes">Được</td><td>Thường không</td><td class="yes">Được</td><td>Vẫn xem patent, trademark và pháp luật địa phương.</td></tr>
+        <tr><td>Không LICENSE</td><td class="no">Không nên</td><td class="no">Không nên</td><td>Không hợp thức hóa</td><td class="no">Không nên</td><td>Xin phép chủ sở hữu hoặc chọn dự án khác.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section id="co-hoi-so" class="panel children">
+    <p class="kicker">Cơ hội máy tính cho mọi trẻ em</p>
+    <h2>Trăn trở về vùng sâu, vùng xa và vùng núi</h2>
+    <div class="prose">
+      <p>Ở nhiều nơi, một chiếc máy tính cũ, đường truyền không ổn định và tài liệu tiếng Anh là những rào cản đủ lớn để một em nhỏ bỏ cuộc trước khi viết được dòng lệnh đầu tiên.</p>
+      <p>Việt hóa có trách nhiệm giúp tài liệu dễ đọc hơn, phần mềm chạy trên máy yếu hơn và bài học có thể dùng ngoại tuyến. Nhưng không dùng hoàn cảnh khó khăn của trẻ em để biện minh cho việc bỏ qua quyền tác giả. <strong>Giáo dục công nghệ phải đi cùng giáo dục về lòng trung thực.</strong></p>
+    </div>
+    <div class="impact">Mục tiêu không phải tạo thật nhiều repository mang tên mới. Mục tiêu là tạo thêm người học hiểu bản chất, biết cảm ơn người đi trước, biết đóng góp ngược và đủ năng lực viết phần mềm của chính mình.</div>
+  </section>
+
+  <section class="panel">
+    <p class="kicker">Cam kết trước khi Fork</p>
+    <h2>Năm câu hỏi tự kiểm tra</h2>
+    <div class="commitments">
+      <label><input type="checkbox"><span>Tôi đã xác định upstream và đọc LICENSE/NOTICE liên quan.</span></label>
+      <label><input type="checkbox"><span>Tôi sẽ giữ ghi công và không tự nhận phần mã, tài liệu hoặc ý tưởng của người khác.</span></label>
+      <label><input type="checkbox"><span>Tôi sẽ ghi rõ phần nào là bản dịch, sửa đổi và phát triển mới.</span></label>
+      <label><input type="checkbox"><span>Tôi đã kiểm tra copyleft, dependency, model, dữ liệu và hình thức phân phối.</span></label>
+      <label><input type="checkbox"><span>Khi có thể, tôi sẽ gửi PR, báo lỗi hoặc chia sẻ cải tiến trở lại upstream.</span></label>
+    </div>
+  </section>
+
+  <footer><b>Việt Hóa Có Trách Nhiệm · Base27-CVNSS</b><br>HTML/CSS/JavaScript thuần · Không backend · Không lưu link đã nhập · Kết quả không phải tư vấn pháp lý.</footer>
+</main>
+
+<div id="modalOverlay" class="overlay" aria-hidden="true">
+  <section id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+    <button id="closeModal" class="close" aria-label="Đóng">×</button>
+    <div id="licenseResult"></div>
+  </section>
+</div>
+<div id="toast" class="toast" role="status">Đã sao chép kết quả</div>
+<script src="app.js"></script>
+</body>
+</html>
